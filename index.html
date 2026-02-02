@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Valentine ❤️</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffd6e7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      position: relative;
+    }
+    button {
+      padding: 10px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px;
+    }
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+    #no {
+      background: #ccc;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>❤️ Will you be my Valentine? ❤️</h1>
+  <button id="yes" onclick="yesClicked()">YES</button>
+  <button id="no" onmouseover="moveNo()">NO</button>
+</div>
+
+<script>
+  function moveNo() {
+    const noBtn = document.getElementById("no");
+    const x = Math.random() * 300 - 150;
+    const y = Math.random() * 300 - 150;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+  }
+
+  function yesClicked() {
+    document.body.innerHTML = "<h1 style='color:#ff4d6d'>YAYYYY ❤️🥰 I love you!</h1>";
+  }
+</script>
+
+</body>
+</html>
